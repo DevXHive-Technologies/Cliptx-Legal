@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cliptx – Support</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #0f0f0f;
+            color: #f0f0f0;
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 1px solid #ffffff15;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(90deg, #a78bfa, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header p {
+            margin-top: 8px;
+            color: #94a3b8;
+            font-size: 1rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            padding: 20px;
+            flex-wrap: wrap;
+            background: #111;
+            border-bottom: 1px solid #ffffff10;
+        }
+
+        nav button {
+            padding: 10px 24px;
+            border-radius: 999px;
+            border: 1px solid #ffffff20;
+            background: transparent;
+            color: #94a3b8;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+
+        nav button.active,
+        nav button:hover {
+            background: linear-gradient(135deg, #a78bfa, #60a5fa);
+            color: white;
+            border-color: transparent;
+        }
+
+        .page {
+            display: none;
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 48px 24px;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #f1f5f9;
+        }
+
+        .subtitle {
+            color: #64748b;
+            margin-bottom: 32px;
+            font-size: 0.95rem;
+        }
+
+        .section {
+            background: #1a1a2e;
+            border: 1px solid #ffffff10;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 20px;
+        }
+
+        .section h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #a78bfa;
+            margin-bottom: 10px;
+        }
+
+        .section p {
+            color: #94a3b8;
+            line-height: 1.7;
+            font-size: 0.93rem;
+        }
+
+        .email-box {
+            background: #1a1a2e;
+            border: 1px solid #a78bfa40;
+            border-radius: 16px;
+            padding: 32px 24px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .email-box p {
+            color: #94a3b8;
+            margin-bottom: 16px;
+            line-height: 1.7;
+        }
+
+        .email-link {
+            display: inline-block;
+            padding: 14px 32px;
+            background: linear-gradient(135deg, #a78bfa, #60a5fa);
+            color: white;
+            border-radius: 999px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .email-link:hover {
+            opacity: 0.85;
+        }
+
+        .email-link-danger {
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+        }
+
+        .warning-box {
+            background: #1c1917;
+            border: 1px solid #ef444440;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 20px;
+        }
+
+        .warning-box h3 {
+            color: #f87171;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        .warning-box p {
+            color: #94a3b8;
+            line-height: 1.7;
+            font-size: 0.93rem;
+        }
+
+        .info-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 16px 0;
+            border-bottom: 1px solid #ffffff08;
+        }
+
+        .info-row:last-child {
+            border-bottom: none;
+        }
+
+        .info-icon {
+            font-size: 1.4rem;
+            margin-top: 2px;
+        }
+
+        .info-text strong {
+            display: block;
+            color: #f1f5f9;
+            font-size: 0.95rem;
+            margin-bottom: 4px;
+        }
+
+        .info-text span {
+            color: #64748b;
+            font-size: 0.88rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 32px;
+            color: #334155;
+            font-size: 0.8rem;
+            border-top: 1px solid #ffffff08;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>✦ Cliptx</h1>
+        <p>Video & Photo Editor — Support Center</p>
+    </header>
+
+    <nav>
+        <button class="active" onclick="showPage('support', this)">🛠 Support</button>
+        <button onclick="showPage('privacy', this)">🔒 Privacy Policy</button>
+        <button onclick="showPage('delete', this)">🗑 Delete Account</button>
+    </nav>
+
+    <!-- SUPPORT -->
+    <div class="page active" id="support">
+        <h2>Support</h2>
+        <p class="subtitle">Need help? We're here for you. Reach out and we'll get back to you within 24–48 hours.</p>
+
+        <div class="section">
+            <div class="info-row">
+                <div class="info-icon">📧</div>
+                <div class="info-text">
+                    <strong>Email Support</strong>
+                    <span>Send us an email and we'll respond within 24–48 hours.</span>
+                </div>
+            </div>
+            <div class="info-row">
+                <div class="info-icon">🕐</div>
+                <div class="info-text">
+                    <strong>Response Time</strong>
+                    <span>Monday – Friday, within 24–48 hours</span>
+                </div>
+            </div>
+            <div class="info-row">
+                <div class="info-icon">🐛</div>
+                <div class="info-text">
+                    <strong>Common Issues</strong>
+                    <span>App crashes, export issues, video/photo editing problems, subscription & billing</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-box">
+            <p>Tap the button below to send us an email.<br />Please include your device model and describe the issue.
+            </p>
+            <a class="email-link" href="mailto:cliptx0@gmail.com?subject=Cliptx Support Request">📩 Email Us —
+                cliptx0@gmail.com</a>
+        </div>
+    </div>
+
+    <!-- PRIVACY -->
+    <div class="page" id="privacy">
+        <h2>Privacy Policy</h2>
+        <p class="subtitle">Cliptx is designed to give you full creative control while protecting your personal
+            information.</p>
+        <div class="section">
+            <h3>1. Information We Collect</h3>
+            <p>We may collect basic account information such as your name, email address, and profile details when you
+                register. We also collect app usage data to improve performance and user experience.</p>
+        </div>
+        <div class="section">
+            <h3>2. Media & Content</h3>
+            <p>Your videos, photos, and edited content remain under your control. Cliptx does not access, modify, or
+                share your media files without your permission.</p>
+        </div>
+        <div class="section">
+            <h3>3. How We Use Information</h3>
+            <p>Collected information is used to provide app functionality, improve editing tools, enhance security, and
+                deliver a better user experience.</p>
+        </div>
+        <div class="section">
+            <h3>4. Data Storage & Security</h3>
+            <p>We use secure servers and encrypted communication (HTTPS) to protect your information. Reasonable
+                security measures are implemented to prevent unauthorized access.</p>
+        </div>
+        <div class="section">
+            <h3>5. Third-Party Services</h3>
+            <p>Cliptx may use trusted third-party services such as authentication providers, analytics tools, or cloud
+                storage. These providers follow their own privacy policies.</p>
+        </div>
+        <div class="section">
+            <h3>6. Permissions</h3>
+            <p>Cliptx requests only necessary permissions such as storage, camera, and microphone access to enable video
+                and photo editing features.</p>
+        </div>
+        <div class="section">
+            <h3>7. Your Rights</h3>
+            <p>You have the right to access, update, or delete your account information. You may contact support for any
+                privacy-related concerns.</p>
+        </div>
+        <div class="section">
+            <h3>8. Policy Updates</h3>
+            <p>We may update this Privacy Policy from time to time. Changes will be reflected within the app along with
+                an updated revision date.</p>
+        </div>
+        <p style="color:#475569;font-size:0.85rem;margin-top:8px;">Last updated: 2026</p>
+    </div>
+
+    <!-- DELETE -->
+    <div class="page" id="delete">
+        <h2>Delete Account</h2>
+        <p class="subtitle">We're sorry to see you go. Please read the information below before requesting deletion.</p>
+
+        <div class="warning-box">
+            <h3>⚠️ What happens when you delete your account?</h3>
+            <p>
+                • All your account data will be permanently deleted.<br />
+                • Your videos, photos, and edited content stored in Cliptx will be removed.<br />
+                • Active subscriptions will not be automatically cancelled — please cancel via the App Store
+                first.<br />
+                • This action is <strong style="color:#f87171;">irreversible</strong>.
+            </p>
+        </div>
+
+        <div class="section">
+            <div class="info-row">
+                <div class="info-icon">1️⃣</div>
+                <div class="info-text">
+                    <strong>Cancel your subscription first</strong>
+                    <span>Go to iPhone Settings → Apple ID → Subscriptions → Cancel Cliptx</span>
+                </div>
+            </div>
+            <div class="info-row">
+                <div class="info-icon">2️⃣</div>
+                <div class="info-text">
+                    <strong>Send a deletion request</strong>
+                    <span>Email us from the address linked to your Cliptx account with the subject "Delete My
+                        Account"</span>
+                </div>
+            </div>
+            <div class="info-row">
+                <div class="info-icon">3️⃣</div>
+                <div class="info-text">
+                    <strong>We'll process it within 7 days</strong>
+                    <span>You'll receive a confirmation email once your account has been deleted</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-box">
+            <p>Send your account deletion request to us directly.<br />Please use the email address linked to your
+                Cliptx account.</p>
+            <a class="email-link email-link-danger"
+                href="mailto:cliptx0@gmail.com?subject=Delete My Cliptx Account&body=Hi, I would like to request the deletion of my Cliptx account.%0A%0AEmail used to register: %0AReason (optional): ">🗑
+                Request Deletion — cliptx0@gmail.com</a>
+        </div>
+    </div>
+
+    <footer>© 2026 Cliptx. All rights reserved.</footer>
+
+    <script>
+        function showPage(id, btn) {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+            btn.classList.add('active');
+        }
+    </script>
+</body>
+
+</html>
