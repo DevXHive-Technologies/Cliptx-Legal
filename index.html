@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cliptx – Support</title>
+    <title>Cliptx – Support Center</title>
     <style>
         * {
             margin: 0;
@@ -111,6 +111,7 @@
             color: #94a3b8;
             line-height: 1.7;
             font-size: 0.93rem;
+            white-space: pre-line;
         }
 
         .email-box {
@@ -183,6 +184,7 @@
         .info-icon {
             font-size: 1.4rem;
             margin-top: 2px;
+            flex-shrink: 0;
         }
 
         .info-text strong {
@@ -195,6 +197,12 @@
         .info-text span {
             color: #64748b;
             font-size: 0.88rem;
+        }
+
+        .meta {
+            color: #475569;
+            font-size: 0.85rem;
+            margin-top: 8px;
         }
 
         footer {
@@ -211,14 +219,16 @@
 <body>
 
     <header>
-        <h1>✦ Cliptx</h1>
+        <h1>Cliptx</h1>
         <p>Video & Photo Editor — Support Center</p>
     </header>
 
     <nav>
-        <button class="active" onclick="showPage('support', this)">🛠 Support</button>
-        <button onclick="showPage('privacy', this)">🔒 Privacy Policy</button>
-        <button onclick="showPage('delete', this)">🗑 Delete Account</button>
+        <button class="active" onclick="showPage('support', this)">Support</button>
+        <button onclick="showPage('privacy', this)">Privacy Policy</button>
+        <button onclick="showPage('terms', this)">Terms of Service</button>
+        <button onclick="showPage('security', this)">Security</button>
+        <button onclick="showPage('delete', this)">Delete Account</button>
     </nav>
 
     <!-- SUPPORT -->
@@ -251,73 +261,297 @@
         </div>
 
         <div class="email-box">
-            <p>Tap the button below to send us an email.<br />Please include your device model and describe the issue.
-            </p>
-            <a class="email-link" href="mailto:cliptx0@gmail.com?subject=Cliptx Support Request">📩 Email Us —
-                cliptx0@gmail.com</a>
+            <p>Tap the button below to send us an email.<br />Please include your device model and describe the issue.</p>
+            <a class="email-link" href="mailto:cliptx0@gmail.com?subject=Cliptx Support Request">Email Us — cliptx0@gmail.com</a>
         </div>
     </div>
 
-    <!-- PRIVACY -->
+    <!-- PRIVACY POLICY -->
     <div class="page" id="privacy">
         <h2>Privacy Policy</h2>
-        <p class="subtitle">Cliptx is designed to give you full creative control while protecting your personal
-            information.</p>
+        <p class="subtitle">Cliptx is designed to give you full creative control while protecting your personal information. This Privacy Policy explains what data we collect, how we use it, and your rights as a user. By using Cliptx, you agree to this policy.</p>
+
         <div class="section">
             <h3>1. Information We Collect</h3>
-            <p>We may collect basic account information such as your name, email address, and profile details when you
-                register. We also collect app usage data to improve performance and user experience.</p>
+            <p>We collect the following types of information:
+
+• Account Information: Your name, email address, and profile photo when you register or sign in via Email, Google, Facebook, or Apple.
+
+• Usage Data: App interactions, feature usage, and crash reports to improve performance and user experience.
+
+• Device Information: Device type, operating system version, and unique device identifiers for analytics and support purposes.
+
+• Push Notification Token: An FCM token used solely to deliver in-app notifications to your device.</p>
         </div>
+
         <div class="section">
             <h3>2. Media & Content</h3>
-            <p>Your videos, photos, and edited content remain under your control. Cliptx does not access, modify, or
-                share your media files without your permission.</p>
+            <p>Your videos, photos, and edited content are processed locally on your device. Cliptx does not upload, access, or share your media files with our servers unless you explicitly choose to publish content to the Cliptx community feed. Published content is stored securely using Cloudinary under your account and can be deleted by you at any time.</p>
         </div>
+
         <div class="section">
-            <h3>3. How We Use Information</h3>
-            <p>Collected information is used to provide app functionality, improve editing tools, enhance security, and
-                deliver a better user experience.</p>
+            <h3>3. How We Use Your Information</h3>
+            <p>We use collected information to:
+
+• Provide and maintain core app features including video editing, photo editing, and account management.
+
+• Process and manage your Premium subscription via RevenueCat.
+
+• Send push notifications about activity relevant to your account.
+
+• Respond to support requests submitted through the in-app support feature.
+
+• Improve app performance, fix bugs, and develop new features.
+
+• Enforce our Terms of Service and prevent misuse.</p>
         </div>
+
         <div class="section">
-            <h3>4. Data Storage & Security</h3>
-            <p>We use secure servers and encrypted communication (HTTPS) to protect your information. Reasonable
-                security measures are implemented to prevent unauthorized access.</p>
+            <h3>4. Third-Party Services</h3>
+            <p>Cliptx uses the following trusted third-party services that may collect and process data under their own privacy policies:
+
+• Firebase (Google): Authentication, database, cloud functions, and push notifications.
+
+• Google Sign-In: OAuth-based login.
+
+• Facebook Login: OAuth-based login via Facebook.
+
+• Sign in with Apple: OAuth-based login via Apple ID.
+
+• RevenueCat: Subscription management and purchase verification.
+
+• Cloudinary: Cloud storage for user-published media content.
+
+We do not sell your data to any third party. We do not use your data for advertising or behavioural tracking.</p>
         </div>
+
         <div class="section">
-            <h3>5. Third-Party Services</h3>
-            <p>Cliptx may use trusted third-party services such as authentication providers, analytics tools, or cloud
-                storage. These providers follow their own privacy policies.</p>
+            <h3>5. Permissions We Request</h3>
+            <p>Cliptx requests the following device permissions:
+
+• Camera: To record videos directly inside the app.
+
+• Microphone: To capture audio when recording video.
+
+• Photo Library (Read): To import videos and photos for editing.
+
+• Photo Library (Write): To save your edited videos and photos to your device.
+
+• Documents Folder: To store temporary video and photo project files.
+
+• Push Notifications: To send you activity updates and alerts.
+
+All permissions are optional where possible. Denying a permission will only disable the related feature.</p>
         </div>
+
         <div class="section">
-            <h3>6. Permissions</h3>
-            <p>Cliptx requests only necessary permissions such as storage, camera, and microphone access to enable video
-                and photo editing features.</p>
+            <h3>6. Data Storage & Security</h3>
+            <p>Your data is stored on secure servers protected by industry-standard encryption (HTTPS/TLS). Account credentials are managed by Firebase Authentication and are never stored in plain text. Local editing files are stored only on your device and are not transmitted to our servers. We implement reasonable technical and organisational measures to protect your information from unauthorised access, loss, or disclosure.</p>
         </div>
+
         <div class="section">
-            <h3>7. Your Rights</h3>
-            <p>You have the right to access, update, or delete your account information. You may contact support for any
-                privacy-related concerns.</p>
+            <h3>7. Data Retention</h3>
+            <p>We retain your account data for as long as your account is active. If you delete your account, all associated personal data, published posts, and media files are permanently deleted from our servers within a reasonable timeframe. You may request account deletion at any time from Settings > Delete my account inside the app.</p>
         </div>
+
         <div class="section">
-            <h3>8. Policy Updates</h3>
-            <p>We may update this Privacy Policy from time to time. Changes will be reflected within the app along with
-                an updated revision date.</p>
+            <h3>8. Children's Privacy</h3>
+            <p>Cliptx is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us and we will promptly delete it.</p>
         </div>
-        <p style="color:#475569;font-size:0.85rem;margin-top:8px;">Last updated: 2026</p>
+
+        <div class="section">
+            <h3>9. Your Rights</h3>
+            <p>You have the right to:
+
+• Access the personal information we hold about you.
+
+• Correct inaccurate or incomplete information.
+
+• Request deletion of your account and associated data.
+
+• Withdraw consent for optional data processing at any time.
+
+To exercise any of these rights, use the in-app support feature or contact us at cliptx0@gmail.com.</p>
+        </div>
+
+        <div class="section">
+            <h3>10. Policy Updates</h3>
+            <p>We may update this Privacy Policy from time to time. When we do, the revised date will be updated within the app. Continued use of Cliptx after changes are posted constitutes your acceptance of the updated policy. We encourage you to review this policy periodically.</p>
+        </div>
+
+        <div class="section">
+            <h3>11. Contact Us</h3>
+            <p>If you have any questions or concerns about this Privacy Policy, please contact us through the in-app support feature in Settings > Support, or email us at cliptx0@gmail.com.</p>
+        </div>
+
+        <p class="meta">Last updated: 2026</p>
     </div>
 
-    <!-- DELETE -->
+    <!-- TERMS OF SERVICE -->
+    <div class="page" id="terms">
+        <h2>Terms of Service</h2>
+        <p class="subtitle">By accessing or using Cliptx, you agree to comply with and be bound by the following Terms of Service. If you do not agree with any part of these terms, you must discontinue use of the application immediately.</p>
+
+        <div class="section">
+            <h3>1. Acceptance of Terms</h3>
+            <p>By creating an account or using Cliptx, you confirm that you are at least 13 years of age, that you have read and understood these Terms, and that you agree to be bound by them. If you are under 18, you confirm that a parent or legal guardian has reviewed and agreed to these Terms on your behalf.</p>
+        </div>
+
+        <div class="section">
+            <h3>2. Use of the Application</h3>
+            <p>Cliptx is a video and photo editing application intended for lawful personal and professional use. You agree not to:
+
+• Use the app for any unlawful, harmful, or fraudulent purpose.
+
+• Attempt to gain unauthorised access to any part of the app or its backend systems.
+
+• Reverse-engineer, decompile, or tamper with any part of the application.
+
+• Interfere with or disrupt the integrity or performance of the service.
+
+• Impersonate any person or entity or misrepresent your affiliation with any person or entity.</p>
+        </div>
+
+        <div class="section">
+            <h3>3. User Content</h3>
+            <p>You retain full ownership of all videos, photos, and media content you create, edit, or publish using Cliptx. By publishing content to the Cliptx community feed, you grant Cliptx a non-exclusive, royalty-free licence to display that content within the app. You are solely responsible for ensuring that your content does not violate any third-party copyright, trademark, or other intellectual property rights, and that it complies with all applicable laws.</p>
+        </div>
+
+        <div class="section">
+            <h3>4. Community Standards & Objectionable Content</h3>
+            <p>Cliptx has a zero-tolerance policy for objectionable content and abusive behaviour. You agree not to post, share, or distribute any content that is:
+
+• Illegal, harmful, threatening, or violent.
+
+• Harassing, defamatory, or abusive toward any individual or group.
+
+• Sexually explicit or obscene.
+
+• Discriminatory based on race, gender, religion, nationality, disability, sexual orientation, or age.
+
+• Spam, misleading, or fraudulent.
+
+You may report objectionable content using the report button available on any post. You may block abusive users from their profile page. Reports are reviewed promptly and violations result in immediate content removal and may result in permanent account termination.</p>
+        </div>
+
+        <div class="section">
+            <h3>5. Subscriptions & Payments</h3>
+            <p>Cliptx offers an optional Premium subscription managed through the Apple App Store via RevenueCat.
+
+• Monthly Plan: $14.99 per month.
+
+• Yearly Plan: $44.99 per year.
+
+Payment is charged to your Apple ID account at confirmation of purchase. Subscriptions automatically renew at the same price unless cancelled at least 24 hours before the end of the current billing period. You can manage or cancel your subscription at any time in your Apple ID Account Settings. No partial refunds are provided for unused portions of an active subscription period. To restore a previous purchase, tap Restore Purchases in the app settings.</p>
+        </div>
+
+        <div class="section">
+            <h3>6. Intellectual Property</h3>
+            <p>All app design elements, branding, logos, interface components, and software code that make up Cliptx are the exclusive property of DevXHive Technologies and are protected by applicable intellectual property laws. You may not copy, reproduce, modify, or redistribute any part of the application without prior written permission.</p>
+        </div>
+
+        <div class="section">
+            <h3>7. Account Responsibility</h3>
+            <p>You are responsible for maintaining the confidentiality of your account credentials. You agree to notify us immediately if you suspect any unauthorised use of your account. Cliptx is not liable for any loss or damage resulting from your failure to protect your account credentials.</p>
+        </div>
+
+        <div class="section">
+            <h3>8. Account Deletion</h3>
+            <p>You may delete your account at any time from Settings > Delete my account. Upon deletion, all your personal data, published posts, and associated media files will be permanently removed from our servers. Account deletion does not automatically cancel an active subscription — you must cancel your subscription separately in your Apple ID Account Settings before deleting your account.</p>
+        </div>
+
+        <div class="section">
+            <h3>9. Limitation of Liability</h3>
+            <p>Cliptx is provided on an "as is" and "as available" basis without warranties of any kind, either express or implied. To the maximum extent permitted by applicable law, DevXHive Technologies shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of or inability to use the application, including but not limited to loss of data, loss of revenue, or loss of profits.</p>
+        </div>
+
+        <div class="section">
+            <h3>10. Termination</h3>
+            <p>We reserve the right to suspend or permanently terminate your account at our sole discretion if you violate these Terms, engage in harmful or illegal activities, or for any other reason with or without notice. Upon termination, your right to use the app ceases immediately.</p>
+        </div>
+
+        <div class="section">
+            <h3>11. Governing Law</h3>
+            <p>These Terms are governed by and construed in accordance with applicable laws. Any disputes arising from these Terms or your use of Cliptx shall be subject to the exclusive jurisdiction of the relevant courts.</p>
+        </div>
+
+        <div class="section">
+            <h3>12. Modifications to Terms</h3>
+            <p>We may update these Terms of Service periodically. When changes are made, the effective date will be updated within the app. Continued use of Cliptx after changes are posted constitutes your acceptance of the revised Terms. We encourage you to review these Terms regularly.</p>
+        </div>
+
+        <div class="section">
+            <h3>13. Contact Us</h3>
+            <p>If you have any questions about these Terms, please contact us through the in-app support feature in Settings > Support, or email us at cliptx0@gmail.com.</p>
+        </div>
+
+        <p class="meta">Effective Date: 2026</p>
+    </div>
+
+    <!-- SECURITY -->
+    <div class="page" id="security">
+        <h2>Security</h2>
+        <p class="subtitle">Cliptx is built with your security as a priority. This page describes the technical and organisational measures we implement to protect your account, your data, and your creative content.</p>
+
+        <div class="section">
+            <h3>Secure Authentication</h3>
+            <p>Cliptx supports Email/Password, Google, Facebook, and Apple Sign-In. All authentication is handled through Firebase Authentication, which uses industry-standard OAuth 2.0 and OpenID Connect protocols. Passwords are never stored in plain text. Apple Sign-In is available and recommended for the highest level of privacy.</p>
+        </div>
+
+        <div class="section">
+            <h3>Encrypted Communications</h3>
+            <p>All data transmitted between your device and Cliptx servers uses HTTPS with TLS encryption. This ensures that your account details, subscription status, and any content you publish cannot be intercepted in transit.</p>
+        </div>
+
+        <div class="section">
+            <h3>Local File Protection</h3>
+            <p>All video and photo editing is performed locally on your device. Your media files are never uploaded to our servers unless you explicitly choose to publish content. Exported and temporary editing files are stored in your device's private app directory and are accessible only to Cliptx and to you.</p>
+        </div>
+
+        <div class="section">
+            <h3>Cloud Data Security</h3>
+            <p>Published content and account data are stored using Firebase Firestore and Cloudinary, both of which use AES-256 encryption at rest and TLS in transit. Access to your stored data is restricted by Firebase security rules — only you can read, update, or delete your own content.</p>
+        </div>
+
+        <div class="section">
+            <h3>Subscription Security</h3>
+            <p>All subscription payments are processed exclusively through the Apple App Store. Cliptx never receives, stores, or processes your payment card information. Subscription status is verified securely through RevenueCat using server-side receipt validation.</p>
+        </div>
+
+        <div class="section">
+            <h3>Push Notification Security</h3>
+            <p>Push notifications are delivered via Firebase Cloud Messaging (FCM). Your FCM token is stored only in association with your account and is never shared with third parties. Notifications are sent only through authenticated server-side Cloud Functions.</p>
+        </div>
+
+        <div class="section">
+            <h3>Account Deletion & Data Removal</h3>
+            <p>When you delete your account, we permanently delete your Firebase Auth account, your Firestore profile and posts, and all associated media files from Cloudinary. This process is handled automatically and cannot be undone. If you only wish to cancel your subscription, you can do so separately in Apple ID Account Settings without deleting your account.</p>
+        </div>
+
+        <div class="section">
+            <h3>Permissions & Access Control</h3>
+            <p>Cliptx requests only the permissions necessary to deliver its core features: Camera, Microphone, Photo Library, and Documents access. Each permission is requested at the point of use and can be revoked at any time from your device Settings. Revoking a permission disables only the related feature and does not affect the rest of the app.</p>
+        </div>
+
+        <div class="section">
+            <h3>Reporting a Security Issue</h3>
+            <p>If you discover a security vulnerability or have a security concern, please report it immediately through the in-app support feature in Settings > Support, or email us at cliptx0@gmail.com. We take all security reports seriously and will respond promptly.</p>
+        </div>
+
+        <p class="meta">Last updated: 2026</p>
+    </div>
+
+    <!-- DELETE ACCOUNT -->
     <div class="page" id="delete">
         <h2>Delete Account</h2>
         <p class="subtitle">We're sorry to see you go. Please read the information below before requesting deletion.</p>
 
         <div class="warning-box">
-            <h3>⚠️ What happens when you delete your account?</h3>
+            <h3>What happens when you delete your account?</h3>
             <p>
                 • All your account data will be permanently deleted.<br />
-                • Your videos, photos, and edited content stored in Cliptx will be removed.<br />
-                • Active subscriptions will not be automatically cancelled — please cancel via the App Store
-                first.<br />
+                • Your published posts and associated media files stored in Cliptx will be removed from our servers.<br />
+                • Active subscriptions will not be automatically cancelled — please cancel via the App Store first.<br />
                 • This action is <strong style="color:#f87171;">irreversible</strong>.
             </p>
         </div>
@@ -333,30 +567,34 @@
             <div class="info-row">
                 <div class="info-icon">2️⃣</div>
                 <div class="info-text">
-                    <strong>Send a deletion request</strong>
-                    <span>Email us from the address linked to your Cliptx account with the subject "Delete My
-                        Account"</span>
+                    <strong>Delete your account in the app</strong>
+                    <span>Go to Settings → Delete my account. Your data will be permanently deleted immediately.</span>
                 </div>
             </div>
             <div class="info-row">
                 <div class="info-icon">3️⃣</div>
                 <div class="info-text">
-                    <strong>We'll process it within 7 days</strong>
+                    <strong>Or send a deletion request by email</strong>
+                    <span>If you are unable to access the app, email us from the address linked to your Cliptx account with the subject "Delete My Account"</span>
+                </div>
+            </div>
+            <div class="info-row">
+                <div class="info-icon">4️⃣</div>
+                <div class="info-text">
+                    <strong>We'll process email requests within 7 days</strong>
                     <span>You'll receive a confirmation email once your account has been deleted</span>
                 </div>
             </div>
         </div>
 
         <div class="email-box">
-            <p>Send your account deletion request to us directly.<br />Please use the email address linked to your
-                Cliptx account.</p>
+            <p>Send your account deletion request to us directly.<br />Please use the email address linked to your Cliptx account.</p>
             <a class="email-link email-link-danger"
-                href="mailto:cliptx0@gmail.com?subject=Delete My Cliptx Account&body=Hi, I would like to request the deletion of my Cliptx account.%0A%0AEmail used to register: %0AReason (optional): ">🗑
-                Request Deletion — cliptx0@gmail.com</a>
+                href="mailto:cliptx0@gmail.com?subject=Delete My Cliptx Account&body=Hi, I would like to request the deletion of my Cliptx account.%0A%0AEmail used to register: %0AReason (optional): ">Request Deletion — cliptx0@gmail.com</a>
         </div>
     </div>
 
-    <footer>© 2026 Cliptx. All rights reserved.</footer>
+    <footer>© 2026 Cliptx · DevXHive Technologies · All rights reserved.</footer>
 
     <script>
         function showPage(id, btn) {
