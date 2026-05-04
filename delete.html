@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cliptx – Support</title>
+    <title>Cliptx – Delete Account</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap');
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -25,6 +25,10 @@
         .email-box p { color: #6b7280; margin-bottom: 20px; line-height: 1.7; font-size: 0.93rem; }
         .email-link { display: inline-block; padding: 13px 30px; background: linear-gradient(135deg, #a78bfa, #60a5fa); color: white; border-radius: 999px; font-size: 0.9rem; font-weight: 600; font-family: 'DM Sans', sans-serif; text-decoration: none; transition: opacity 0.2s; }
         .email-link:hover { opacity: 0.82; }
+        .email-link-danger { background: linear-gradient(135deg, #f87171, #dc2626); }
+        .warning-box { background: #110d0d; border: 1px solid #ef444428; border-radius: 14px; padding: 24px; margin-bottom: 16px; }
+        .warning-box h3 { font-family: 'Syne', sans-serif; color: #f87171; margin-bottom: 12px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.8px; }
+        .warning-box p { color: #9ca3af; line-height: 1.75; font-size: 0.9rem; }
         .info-row { display: flex; align-items: flex-start; gap: 14px; padding: 16px 0; border-bottom: 1px solid #ffffff07; }
         .info-row:last-child { border-bottom: none; }
         .info-icon { font-size: 1.3rem; margin-top: 2px; flex-shrink: 0; }
@@ -39,44 +43,62 @@
         <p>Video &amp; Photo Editor — Support Center</p>
     </header>
     <nav>
-        <a href="index.html" class="active">Support</a>
+        <a href="index.html">Support</a>
         <a href="privacy.html">Privacy Policy</a>
         <a href="terms.html">Terms of Service</a>
         <a href="security.html">Security</a>
-        <a href="delete.html">Delete Account</a>
+        <a href="delete.html" class="active">Delete Account</a>
     </nav>
 
     <div class="page">
-        <h2>Support</h2>
-        <p class="subtitle">Need help? We're here for you. Reach out and we'll get back to you within 24–48 hours.</p>
+        <h2>Delete Account</h2>
+        <p class="subtitle">We're sorry to see you go. Please read the information below before requesting deletion.</p>
+
+        <div class="warning-box">
+            <h3>⚠️ What happens when you delete your account?</h3>
+            <p>
+                • All your account data will be permanently deleted.<br />
+                • Your published posts and associated media files stored in Cliptx will be removed from our servers.<br />
+                • Active subscriptions will not be automatically cancelled — please cancel via the App Store first.<br />
+                • This action is <strong style="color:#f87171;">irreversible</strong>.
+            </p>
+        </div>
 
         <div class="section">
             <div class="info-row">
-                <div class="info-icon">📧</div>
+                <div class="info-icon">1️⃣</div>
                 <div class="info-text">
-                    <strong>Email Support</strong>
-                    <span>Send us an email and we'll respond within 24–48 hours.</span>
+                    <strong>Cancel your subscription first</strong>
+                    <span>Go to iPhone Settings → Apple ID → Subscriptions → Cancel Cliptx</span>
                 </div>
             </div>
             <div class="info-row">
-                <div class="info-icon">🕐</div>
+                <div class="info-icon">2️⃣</div>
                 <div class="info-text">
-                    <strong>Response Time</strong>
-                    <span>Monday – Friday, within 24–48 hours</span>
+                    <strong>Delete your account in the app</strong>
+                    <span>Go to Settings → Delete my account. Your data will be permanently deleted immediately.</span>
                 </div>
             </div>
             <div class="info-row">
-                <div class="info-icon">🐛</div>
+                <div class="info-icon">3️⃣</div>
                 <div class="info-text">
-                    <strong>Common Issues</strong>
-                    <span>App crashes, export issues, video/photo editing problems, subscription &amp; billing</span>
+                    <strong>Or send a deletion request by email</strong>
+                    <span>If you are unable to access the app, email us from the address linked to your Cliptx account with the subject "Delete My Account"</span>
+                </div>
+            </div>
+            <div class="info-row">
+                <div class="info-icon">4️⃣</div>
+                <div class="info-text">
+                    <strong>We'll process email requests within 7 days</strong>
+                    <span>You'll receive a confirmation email once your account has been deleted</span>
                 </div>
             </div>
         </div>
 
         <div class="email-box">
-            <p>Tap the button below to send us an email.<br />Please include your device model and describe the issue.</p>
-            <a class="email-link" href="mailto:cliptx0@gmail.com?subject=Cliptx Support Request">Email Us — cliptx0@gmail.com</a>
+            <p>Send your account deletion request to us directly.<br />Please use the email address linked to your Cliptx account.</p>
+            <a class="email-link email-link-danger"
+                href="mailto:cliptx0@gmail.com?subject=Delete My Cliptx Account&body=Hi, I would like to request the deletion of my Cliptx account.%0A%0AEmail used to register: %0AReason (optional): ">Request Deletion — cliptx0@gmail.com</a>
         </div>
     </div>
 

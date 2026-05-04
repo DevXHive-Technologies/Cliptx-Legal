@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cliptx – Security</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'DM Sans', sans-serif; background: #080810; color: #f0f0f0; min-height: 100vh; }
+        header { background: linear-gradient(135deg, #0d0d1a 0%, #111128 100%); padding: 44px 20px 36px; text-align: center; border-bottom: 1px solid #ffffff10; position: relative; overflow: hidden; }
+        header::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 80% at 50% -20%, #a78bfa22, transparent); pointer-events: none; }
+        header h1 { font-family: 'Syne', sans-serif; font-size: 2.6rem; font-weight: 800; background: linear-gradient(90deg, #a78bfa, #60a5fa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -0.5px; }
+        header p { margin-top: 6px; color: #6b7280; font-size: 0.95rem; font-weight: 300; }
+        nav { display: flex; justify-content: center; gap: 8px; padding: 18px 20px; flex-wrap: wrap; background: #0a0a14; border-bottom: 1px solid #ffffff0d; position: sticky; top: 0; z-index: 100; }
+        nav a { padding: 9px 22px; border-radius: 999px; border: 1px solid #ffffff15; background: transparent; color: #6b7280; font-size: 0.875rem; font-family: 'DM Sans', sans-serif; font-weight: 500; text-decoration: none; transition: all 0.2s; white-space: nowrap; }
+        nav a.active, nav a:hover { background: linear-gradient(135deg, #a78bfa, #60a5fa); color: white; border-color: transparent; }
+        .page { max-width: 760px; margin: 0 auto; padding: 52px 24px 80px; }
+        h2 { font-family: 'Syne', sans-serif; font-size: 1.75rem; font-weight: 700; margin-bottom: 8px; color: #f1f5f9; letter-spacing: -0.3px; }
+        .subtitle { color: #4b5563; margin-bottom: 36px; font-size: 0.93rem; line-height: 1.65; }
+        .section { background: #0e0e1c; border: 1px solid #ffffff0d; border-radius: 14px; padding: 24px; margin-bottom: 16px; }
+        .section h3 { font-family: 'Syne', sans-serif; font-size: 0.85rem; font-weight: 700; color: #a78bfa; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.8px; }
+        .section p { color: #9ca3af; line-height: 1.75; font-size: 0.9rem; white-space: pre-line; }
+        .meta { color: #374151; font-size: 0.82rem; margin-top: 12px; }
+        footer { text-align: center; padding: 28px; color: #1f2937; font-size: 0.78rem; border-top: 1px solid #ffffff07; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cliptx</h1>
+        <p>Video &amp; Photo Editor — Support Center</p>
+    </header>
+    <nav>
+        <a href="index.html">Support</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="security.html" class="active">Security</a>
+        <a href="delete.html">Delete Account</a>
+    </nav>
+
+    <div class="page">
+        <h2>Security</h2>
+        <p class="subtitle">Cliptx is built with your security as a priority. This page describes the technical and organisational measures we implement to protect your account, your data, and your creative content.</p>
+
+        <div class="section">
+            <h3>Secure Authentication</h3>
+            <p>Cliptx supports Email/Password, Google, Facebook, and Apple Sign-In. All authentication is handled through Firebase Authentication, which uses industry-standard OAuth 2.0 and OpenID Connect protocols. Passwords are never stored in plain text. Apple Sign-In is available and recommended for the highest level of privacy.</p>
+        </div>
+
+        <div class="section">
+            <h3>Encrypted Communications</h3>
+            <p>All data transmitted between your device and Cliptx servers uses HTTPS with TLS encryption. This ensures that your account details, subscription status, and any content you publish cannot be intercepted in transit.</p>
+        </div>
+
+        <div class="section">
+            <h3>Local File Protection</h3>
+            <p>All video and photo editing is performed locally on your device. Your media files are never uploaded to our servers unless you explicitly choose to publish content. Exported and temporary editing files are stored in your device's private app directory and are accessible only to Cliptx and to you.</p>
+        </div>
+
+        <div class="section">
+            <h3>Cloud Data Security</h3>
+            <p>Published content and account data are stored using Firebase Firestore and Cloudinary, both of which use AES-256 encryption at rest and TLS in transit. Access to your stored data is restricted by Firebase security rules — only you can read, update, or delete your own content.</p>
+        </div>
+
+        <div class="section">
+            <h3>Subscription Security</h3>
+            <p>All subscription payments are processed exclusively through the Apple App Store. Cliptx never receives, stores, or processes your payment card information. Subscription status is verified securely through RevenueCat using server-side receipt validation.</p>
+        </div>
+
+        <div class="section">
+            <h3>Push Notification Security</h3>
+            <p>Push notifications are delivered via Firebase Cloud Messaging (FCM). Your FCM token is stored only in association with your account and is never shared with third parties. Notifications are sent only through authenticated server-side Cloud Functions.</p>
+        </div>
+
+        <div class="section">
+            <h3>Account Deletion &amp; Data Removal</h3>
+            <p>When you delete your account, we permanently delete your Firebase Auth account, your Firestore profile and posts, and all associated media files from Cloudinary. This process is handled automatically and cannot be undone. If you only wish to cancel your subscription, you can do so separately in Apple ID Account Settings without deleting your account.</p>
+        </div>
+
+        <div class="section">
+            <h3>Permissions &amp; Access Control</h3>
+            <p>Cliptx requests only the permissions necessary to deliver its core features: Camera, Microphone, Photo Library, and Documents access. Each permission is requested at the point of use and can be revoked at any time from your device Settings. Revoking a permission disables only the related feature and does not affect the rest of the app.</p>
+        </div>
+
+        <div class="section">
+            <h3>Reporting a Security Issue</h3>
+            <p>If you discover a security vulnerability or have a security concern, please report it immediately through the in-app support feature in Settings > Support, or email us at cliptx0@gmail.com. We take all security reports seriously and will respond promptly.</p>
+        </div>
+
+        <p class="meta">Last updated: 2026</p>
+    </div>
+
+    <footer>© 2026 Cliptx · DevXHive Technologies · All rights reserved.</footer>
+</body>
+</html>
